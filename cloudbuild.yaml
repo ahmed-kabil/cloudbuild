@@ -11,7 +11,7 @@ steps:
       - '-c'
       - |
         ls -la
-        echo "hello iam using the shell of $$BASH already"
+        echo "hello iam using the shell of $SHELL already"
 
 # 👇 Add this block to fix the error
 options:
