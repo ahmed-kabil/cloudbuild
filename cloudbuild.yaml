@@ -1,0 +1,16 @@
+steps:
+  # Step 1: Correctly uses -c to execute a bash string
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args: 
+      - '-c'
+      - 'echo "hello world;"'
+
+  # Step 2: Fixed using -c so bash parses the string correctly
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        ls -la
+        echo "hello iam using the shell of $BASH already"
