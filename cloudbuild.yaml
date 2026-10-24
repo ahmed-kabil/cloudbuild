@@ -15,6 +15,14 @@ steps:
         ls -la
         echo "hello iam using the shell of $$SHELL already"
 
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |
+      echo "in this step i will show the content of the index file then i will update some things in its content and show again"
+      cat ./index.html
+
 # 👇 Add this block to fix the error
 options:
   logging: CLOUD_LOGGING_ONLY
