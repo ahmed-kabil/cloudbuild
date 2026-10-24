@@ -3,7 +3,9 @@ steps:
     entrypoint: 'bash'
     args: 
       - '-c'
-      - 'echo "hello world;"'
+      - |
+        'echo "hello world;"'
+        'echo "$PROJECT_ID" '
 
   - name: 'ubuntu'
     entrypoint: 'bash'
