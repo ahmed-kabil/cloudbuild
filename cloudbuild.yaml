@@ -4,8 +4,8 @@ steps:
     args: 
       - '-c'
       - |
-        'echo "hello world;"'
-        'echo "$PROJECT_ID" '
+        echo "hello world;"
+        echo "$PROJECT_ID" 
 
   - name: 'ubuntu'
     entrypoint: 'bash'
