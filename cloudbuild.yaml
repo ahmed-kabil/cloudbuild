@@ -22,6 +22,9 @@ steps:
     - |
       echo "in this step i will show the content of the index file then i will update some things in its content and show again"
       cat ./index.html
+      sed -i 's/<h1>/<h2>/g ; s/<\/h1>/<\/h2>/g' index.html
+      echo "cat the file after substitue h1 with h2"
+      cat ./index.html
 
 # 👇 Add this block to fix the error
 options:
